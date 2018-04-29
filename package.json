@@ -1,0 +1,6 @@
+{
+  "name": "zimjs",
+  "devDependencies": {
+    "@neoli/createjs": "0.0.8"
+  }
+}

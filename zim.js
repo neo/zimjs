@@ -1,3 +1,7 @@
+var createjs = this.createjs;
+try {
+	createjs = require('@neoli/createjs');
+} catch(e) {}
 // ZIM js Interactive Media framework http://zimjs.com by Dan Zen http://danzen.com (c) 2017
 // Also see http://zimjs.com/distill to minify only the functions in your app
 // free to use - donations welcome of course! http://zimjs.com/donate
@@ -27472,4 +27476,6 @@ dispose() - clear any event listeners, etc.
 
 	return zim;
 } (zim || {});
-if (!window.zns) zimplify();
+
+if (module) module.exports = zim;
+else if (!window.zns) zimplify();
